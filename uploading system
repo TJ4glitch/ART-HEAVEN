@@ -1,0 +1,6 @@
+<form id="uploadForm">
+  <input type="file" id="artFile" accept="image/*">
+  <input type="text" id="artTitle" placeholder="Art title">
+  <button type="submit">Upload</button>
+</form>
+<div id="gallery"></div>
