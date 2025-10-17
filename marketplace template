@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art Marketplace</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+    background: #f7f7f7;
+}
+
+h1 {
+    color: #333;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin: 10px 0 5px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.card p {
+    margin: 0 0 10px 0;
+    color: #888;
+}
+
+.card button {
+    padding: 8px 15px;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background: #45a049;
+}
+</style>
+</head>
+<body>
+
+<h1>Art Marketplace</h1>
+<p>Explore and buy amazing artwork</p>
+
+<div class="gallery" id="gallery">
+    <!-- Artwork cards will go here -->
+</div>
+
+<script>
+// Sample data for artworks (replace with your uploaded artworks)
+const artworks = [
+    { title: "Sunset Bliss", price: "$20", image: "https://via.placeholder.com/300x200?text=Artwork+1" },
+    { title: "Ocean Wave", price: "$35", image: "https://via.placeholder.com/300x200?text=Artwork+2" },
+    { title: "Mountain View", price: "$50", image: "https://via.placeholder.com/300x200?text=Artwork+3" }
+];
+
+const gallery = document.getElementById('gallery');
+
+artworks.forEach(art => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+        <img src="${art.image}" alt="${art.title}">
+        <h3>${art.title}</h3>
+        <p>Price: ${art.price}</p>
+        <button>Buy Now</button>
+    `;
+    gallery.appendChild(card);
+});
+</script>
+
+</body>
+</html>
