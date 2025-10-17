@@ -1,0 +1,4 @@
+<!-- Add in your homepage header / hero -->
+<button onclick="location.href='login.html'" style="position:absolute; top:20px; right:20px; padding:10px 15px; border:none; background:#ff6f61; color:white; border-radius:8px; cursor:pointer;">
+Login / Sign Up
+</button>
